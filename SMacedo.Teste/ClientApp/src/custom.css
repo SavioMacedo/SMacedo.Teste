@@ -1,0 +1,41 @@
+/* Provide sufficient contrast against white background */
+body {
+    background-color: #cdd1d4;
+}
+
+.container .row,.rounded {
+    background-color: white;
+}
+
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.row.rounded {
+    margin-top: 30px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.col.text-center {
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.col.active {
+    border-bottom: 3px solid orange;
+    font-weight: 600;
+}
+
+.fs-8 {
+    font-size: 0.8em !important;
+}
