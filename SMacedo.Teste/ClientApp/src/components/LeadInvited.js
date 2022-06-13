@@ -10,7 +10,7 @@ export class LeadInvited extends Component {
 
     render() {
         return (
-            <div className="row rounded">
+            <div className="row rounded shadow border-5 border-dark">
                 <div className="col p-0">
                     <div className="card">
                         <div className="card-body">

@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="CSharpFunctionalExtensions" Version="2.29.3" />
+		<PackageReference Include="MediatR" Version="10.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\SMacedo.Teste.Domain\SMacedo.Teste.Domain.csproj" />
+	</ItemGroup>
+
 </Project>

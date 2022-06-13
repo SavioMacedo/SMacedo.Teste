@@ -30,7 +30,7 @@ export class Home extends Component {
 
     return (
         <div className="container-sm w-50">
-            <div className="row rounded">
+            <div className="row rounded shadow border-5 border-dark">
                 <div
                     onClick={this.handlerTabInvited}
                     className={this.state.activeTab === "invited" ? "col active text-center" : "col text-center"}>

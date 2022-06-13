@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CSharpFunctionalExtensions;
+using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SMacedo.Teste.Application.Querys;
 using SMacedo.Teste.Application.ViewModels;
+using System.Collections.Generic;
 
 namespace SMacedo.Teste.Controllers
 {
@@ -8,44 +12,26 @@ namespace SMacedo.Teste.Controllers
     [ApiController]
     public class LeadsController : ControllerBase
     {
+        private readonly IMediator _mediator;
+
+        public LeadsController(IMediator mediator) => _mediator = mediator;
+
         [HttpGet]
         [Route("invited")]
-        public IActionResult GetInvited()
+        public async Task<IActionResult> GetInvitedAsync()
         {
-            IList<LeadInvitedViewModel> result = new List<LeadInvitedViewModel>();
-            result.Add(new LeadInvitedViewModel
-            {
-                Category = "Painters",
-                CreateDate = "January 4 @ 2:37 pm",
-                Description = "Need to paint something, pliz.",
-                FirstName = "Savio",
-                Id = 250,
-                Location = "Brazil, 240 St.",
-                Price = 36.20
-            });
+            Result<IEnumerable<LeadInvitedViewModel>> result = await _mediator.Send(new LeadsInvitedQuery());
 
-            return Ok(result);
+            return (result.IsSuccess) ? Ok(result.Value) : BadRequest(result.Error);
         }
 
         [HttpGet]
         [Route("accepted")]
-        public IActionResult GetAccepted()
+        public async Task<IActionResult> GetAcceptedAsync()
         {
-            IList<LeadAcceptedViewModel> result = new List<LeadAcceptedViewModel>();
-            result.Add(new LeadAcceptedViewModel
-            {
-                Category = "Painters",
-                CreateDate = "January 4 @ 2:37 pm",
-                Description = "Need to paint something, pliz.",
-                FirstName = "Savio",
-                Id = 250,
-                Location = "Brazil, 240 St.",
-                Price = 36.20,
-                Phone = "+553299999876",
-                Email = "teste@email.com"
-            });
+            Result<IEnumerable<LeadAcceptedViewModel>> result = await _mediator.Send(new LeadsAcceptedQuery());
 
-            return Ok(result);
+            return (result.IsSuccess) ? Ok(result.Value) : BadRequest(result.Error);
         }
     }
 }

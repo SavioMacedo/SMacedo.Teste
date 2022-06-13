@@ -1,8 +1,15 @@
+using SMacedo.Teste.Application.Querys;
+using SMacedo.Teste.Infra.IoC;
+using System.Reflection;
+using MediatR;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddDatabaseConfiguration(builder.Configuration);
+builder.Services.AddMediatR(typeof(LeadsInvitedQuery).GetTypeInfo().Assembly);
 
 var app = builder.Build();
 
