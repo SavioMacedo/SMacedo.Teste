@@ -11,6 +11,10 @@ a {
   color: #0366d6;
 }
 
+    a.ms-2 {
+        color: rgb(255, 193, 7) !important;
+    }
+
 code {
   color: #E01A76;
 }
