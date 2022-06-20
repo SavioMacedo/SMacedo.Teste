@@ -3,25 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMacedo.Teste", "SMacedo.Teste\SMacedo.Teste.csproj", "{2A0F49B8-F369-4C1C-93DF-ACDFB6B05B2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMacedo.Teste", "src\SMacedo.Teste\SMacedo.Teste.csproj", "{2A0F49B8-F369-4C1C-93DF-ACDFB6B05B2C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{A9E3EC5E-8E68-49B0-892F-5FDDCC993941}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{B2D4C1D1-82AE-429A-8523-ECEA7DE54B8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMacedo.Teste.Application", "SMacedo.Teste.Application\SMacedo.Teste.Application.csproj", "{4BC4D82E-6B5B-4225-8045-AEB1AA1E386B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMacedo.Teste.Application", "src\SMacedo.Teste.Application\SMacedo.Teste.Application.csproj", "{4BC4D82E-6B5B-4225-8045-AEB1AA1E386B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{173AC842-0132-495D-A820-1C7B8F6FA18E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{3BBA4ED3-72C5-4913-B35E-0D5A1415BF00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMacedo.Teste.Infra.SQLServerClient", "SMacedo.Teste.Infra.SQLServerClient\SMacedo.Teste.Infra.SQLServerClient.csproj", "{0559AE18-DB9A-4711-9223-B8A0DC599D6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMacedo.Teste.Infra.SQLServerClient", "src\SMacedo.Teste.Infra.SQLServerClient\SMacedo.Teste.Infra.SQLServerClient.csproj", "{0559AE18-DB9A-4711-9223-B8A0DC599D6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMacedo.Teste.Domain", "SMacedo.Teste.Domain\SMacedo.Teste.Domain.csproj", "{BB8C2730-A7DB-4EBB-85B8-2FEC4F3BE5E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMacedo.Teste.Domain", "src\SMacedo.Teste.Domain\SMacedo.Teste.Domain.csproj", "{BB8C2730-A7DB-4EBB-85B8-2FEC4F3BE5E0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{12FC27E0-C63E-40B0-B084-F33D3F32E2E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMacedo.Teste.Infra.IoC", "SMacedo.Teste.Infra.IoC\SMacedo.Teste.Infra.IoC.csproj", "{946F5388-8898-47E5-ABD1-DC7BDF020976}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMacedo.Teste.Infra.IoC", "src\SMacedo.Teste.Infra.IoC\SMacedo.Teste.Infra.IoC.csproj", "{946F5388-8898-47E5-ABD1-DC7BDF020976}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FE6AE8FA-D202-41D2-BFD2-365C88F91906}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9B69F068-2B84-438C-A407-A0E66A9B4B38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMacedo.Teste.Presentation.Tests", "tests\SMacedo.Teste.Presentation.Tests\SMacedo.Teste.Presentation.Tests.csproj", "{4F057179-090E-4613-B03D-94FF661DE412}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMacedo.Teste.Application.Tests", "tests\SMacedo.Teste.Application.Tests\SMacedo.Teste.Application.Tests.csproj", "{948AB173-CCE3-4B55-80D1-DF19A753C6EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,17 +57,31 @@ Global
 		{946F5388-8898-47E5-ABD1-DC7BDF020976}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{946F5388-8898-47E5-ABD1-DC7BDF020976}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{946F5388-8898-47E5-ABD1-DC7BDF020976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F057179-090E-4613-B03D-94FF661DE412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F057179-090E-4613-B03D-94FF661DE412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F057179-090E-4613-B03D-94FF661DE412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F057179-090E-4613-B03D-94FF661DE412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{948AB173-CCE3-4B55-80D1-DF19A753C6EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{948AB173-CCE3-4B55-80D1-DF19A753C6EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{948AB173-CCE3-4B55-80D1-DF19A753C6EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{948AB173-CCE3-4B55-80D1-DF19A753C6EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2A0F49B8-F369-4C1C-93DF-ACDFB6B05B2C} = {A9E3EC5E-8E68-49B0-892F-5FDDCC993941}
+		{A9E3EC5E-8E68-49B0-892F-5FDDCC993941} = {FE6AE8FA-D202-41D2-BFD2-365C88F91906}
+		{B2D4C1D1-82AE-429A-8523-ECEA7DE54B8A} = {FE6AE8FA-D202-41D2-BFD2-365C88F91906}
 		{4BC4D82E-6B5B-4225-8045-AEB1AA1E386B} = {B2D4C1D1-82AE-429A-8523-ECEA7DE54B8A}
+		{173AC842-0132-495D-A820-1C7B8F6FA18E} = {FE6AE8FA-D202-41D2-BFD2-365C88F91906}
+		{3BBA4ED3-72C5-4913-B35E-0D5A1415BF00} = {FE6AE8FA-D202-41D2-BFD2-365C88F91906}
 		{0559AE18-DB9A-4711-9223-B8A0DC599D6F} = {3BBA4ED3-72C5-4913-B35E-0D5A1415BF00}
 		{BB8C2730-A7DB-4EBB-85B8-2FEC4F3BE5E0} = {173AC842-0132-495D-A820-1C7B8F6FA18E}
 		{12FC27E0-C63E-40B0-B084-F33D3F32E2E4} = {3BBA4ED3-72C5-4913-B35E-0D5A1415BF00}
 		{946F5388-8898-47E5-ABD1-DC7BDF020976} = {12FC27E0-C63E-40B0-B084-F33D3F32E2E4}
+		{4F057179-090E-4613-B03D-94FF661DE412} = {9B69F068-2B84-438C-A407-A0E66A9B4B38}
+		{948AB173-CCE3-4B55-80D1-DF19A753C6EE} = {9B69F068-2B84-438C-A407-A0E66A9B4B38}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DBB4956E-5BA3-40BE-B140-1BD4F05ADE4B}
